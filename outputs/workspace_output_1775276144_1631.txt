@@ -1,0 +1,99 @@
+============================================================
+FEATURE ENGINEERING FOR SHORT-TERM DEMAND FORECASTING
+============================================================
+
+📊 Original dataset shape: (9519, 11)
+Date range: 2025-11-04 10:00:00 to 2026-04-03 18:45:00
+
+🔧 Creating proper time series structure...
+Expected intervals: 14436
+Actual records: 9519
+Missing intervals: 4917
+   First few missing: [Timestamp('2025-11-04 19:45:00'), Timestamp('2025-11-04 22:45:00'), Timestamp('2025-11-04 23:15:00'), Timestamp('2025-11-04 23:45:00'), Timestamp('2025-11-05 00:00:00')]
+   After reindexing: 14436 records
+
+✓ Time series structure created: (14436, 11)
+
+🔧 Creating temporal features...
+✓ Temporal features created: Hour, DayOfWeek, Month, IsWeekend, Cyclical encodings
+
+🔧 Creating lag features...
+✓ Lag features created for intervals: [1, 2, 3, 4, 8, 16, 32, 48, 96]
+
+🔧 Creating rolling statistics...
+✓ Rolling statistics created for windows: [4, 8, 16, 32, 96]
+
+🔧 Creating difference features...
+✓ Difference features created
+
+🔧 Creating aggregated historical features...
+✓ Aggregated features created
+
+🔧 Creating target variables for different forecast horizons...
+✓ Target variables created for horizons: ['15min', '30min', '1hr', '2hr']
+
+🔧 Cleaning up dataset...
+Rows removed due to NaN: 2582
+Final dataset shape: (11854, 98)
+
+✅ Feature-engineered dataset saved to data/ferry_tickets_engineered.csv
+
+============================================================
+FEATURE ENGINEERING SUMMARY
+============================================================
+
+Temporal Features (20):
+   - Hour
+   - DayOfWeek
+   - DayName
+   - Month
+   - IsWeekend
+   ... and 15 more
+
+Lag Features (18):
+   - Sales_Lag_1
+   - Redemption_Lag_1
+   - Sales_Lag_2
+   - Redemption_Lag_2
+   - Sales_Lag_3
+   ... and 13 more
+
+Rolling Features (40):
+   - Sales_Rolling_Mean_4
+   - Redemption_Rolling_Mean_4
+   - Sales_Rolling_Std_4
+   - Redemption_Rolling_Std_4
+   - Sales_Rolling_Max_4
+   ... and 35 more
+
+Difference Features (6):
+   - Sales_Diff_1
+   - Redemption_Diff_1
+   - Sales_PctChange_1
+   - Redemption_PctChange_1
+   - Sales_Diff_24h
+   ... and 1 more
+
+Aggregated Features (5):
+   - Sales_Previous_Day_Total
+   - Sales_Same_Time_Last_Week
+   - Sales_Hourly_Avg
+   - Redemption_Hourly_Avg
+   - Sales_DayOfWeek_Avg
+
+Target Features (8):
+   - Sales_Target_15min
+   - Redemption_Target_15min
+   - Sales_Target_30min
+   - Redemption_Target_30min
+   - Sales_Target_1hr
+   ... and 3 more
+
+============================================================
+Total features: 98
+Total records: 11854
+============================================================
+
+Features available for model training: 92
+Target horizons: ['15min', '30min', '1hr', '2hr']
+✅ Feature list saved to data/feature_list.csv

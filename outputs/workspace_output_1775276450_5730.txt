@@ -1,0 +1,6 @@
+print(f"\nFeatures for training: {len(feature_cols)}")
+print(f"Sample features: {feature_cols[:10]}")
+
+# ============================================================================
+# BASELINE MODELS
+# ============================================================================

@@ -1,0 +1,3 @@
+Remaining target columns: ['Sales_Target_15min', 'Sales_Target_30min', 'Sales_Target_1hr', 'Sales_Target_2hr']
+Total features: 53
+First 10 features: ['Hour', 'DayOfWeek', 'Month', 'IsWeekend', 'DayOfYear', 'Week', 'Quarter', 'Hour_sin', 'Hour_cos', 'DayOfWeek_sin']

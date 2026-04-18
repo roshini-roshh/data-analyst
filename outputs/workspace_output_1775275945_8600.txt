@@ -1,0 +1,40 @@
+Creating comprehensive visualizations...
+✓ Figure 1: Time Series Overview saved
+✓ Figure 2: Temporal Patterns saved
+✓ Figure 3: Distribution Analysis saved
+✓ Figure 4: Heatmap saved
+✓ Figure 5: Daily Trends saved
+✓ Figure 6: Peak Demand Analysis saved
+
+✅ Enhanced dataset with temporal features saved to data/ferry_tickets_features.csv
+
+============================================================
+KEY INSIGHTS FROM EDA
+============================================================
+
+1. DATA CHARACTERISTICS:
+   - Total records: 9,519
+   - Time span: 2025-11-04 to 2026-04-03
+   - Records with zero sales: 1451 (15.2%)
+
+2. TEMPORAL PATTERNS:
+   - Peak sales hour: 15 (avg: 23.0)
+   - Peak redemption hour: 15 (avg: 23.6)
+   - Busiest day: Saturday (avg: 14.5)
+
+3. DEMAND VARIABILITY:
+   - Sales coefficient of variation: 214.9%
+   - Max sales in single interval: 1000
+   - 90th percentile threshold: 27
+
+4. WEEKEND VS WEEKDAY:
+   - Weekday avg sales: 11.1
+   - Weekend avg sales: 13.1
+   - Weekend lift: +18.5%
+
+5. CORRELATION:
+   - Sales-Redemption correlation: 0.805
+
+============================================================
+All visualizations saved to output/figures/
+============================================================

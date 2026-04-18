@@ -1,0 +1,132 @@
+======================================================================
+SHORT-TERM DEMAND FORECASTING - MODEL TRAINING & EVALUATION
+======================================================================
+
+📊 Dataset loaded: 11854 records, 98 features
+
+🔧 Performing time-based train-test split...
+Training set: 9483 records (2025-11-11 10:00:00 to 2026-03-06 13:15:00)
+Test set: 2371 records (2026-03-06 13:30:00 to 2026-04-03 16:45:00)
+
+Features for training: 49
+Sample features: ['Hour', 'DayOfWeek', 'Month', 'IsWeekend', 'DayOfYear', 'Week', 'Quarter', 'Hour_sin', 'Hour_cos', 'DayOfWeek_sin']
+✓ No target columns in features (data leakage check passed)
+
+======================================================================
+TRAINING BASELINE MODELS
+======================================================================
+
+Training samples: 9483, Test samples: 2371
+
+📊 Training Naive Forecast...
+📊 Training Moving Average...
+📊 Training Linear Regression...
+📊 Training Ridge Regression...
+
+======================================================================
+TRAINING MACHINE LEARNING MODELS
+======================================================================
+
+📊 Training Random Forest...
+📊 Training Gradient Boosting...
+📊 Training XGBoost...
+
+======================================================================
+MODEL COMPARISON - 1-HOUR AHEAD FORECAST
+======================================================================
+
+               Model       MAE      RMSE   MAPE (%)  Within ±10 (%)
+Moving Average (1hr)  8.041640 18.641696 152.897541       78.869675
+    Ridge Regression  9.961778 18.947962 293.971642       66.891607
+   Linear Regression 10.350087 19.217903 293.473723       67.777309
+       Naive (t=t-1)  8.535005 22.150502 126.873739       78.152678
+       Random Forest  8.963536 22.321386 163.521860       75.748629
+   Gradient Boosting 12.323665 25.086580 277.129452       67.102488
+             XGBoost 11.229490 26.753914 203.985826       71.488823
+
+📊 Analyzing feature importance...
+
+Top 20 Most Important Features:
+                  Feature  Importance
+                 Hour_cos    0.098289
+    Sales_Rolling_Mean_96    0.069287
+    Sales_Rolling_Mean_16    0.067665
+              Sales_Lag_4    0.060323
+      Sales_Rolling_Min_4    0.047105
+     Sales_Rolling_Mean_4    0.045844
+           Sales_Diff_24h    0.038096
+              Sales_Lag_8    0.036150
+ Sales_Previous_Day_Total    0.035989
+     Sales_Rolling_Mean_8    0.030466
+Sales_Same_Time_Last_Week    0.030225
+        Sales_PctChange_1    0.029526
+             Sales_Lag_96    0.029425
+     Sales_Rolling_Std_32    0.028248
+             Sales_Lag_16    0.022605
+    Sales_Rolling_Mean_32    0.020889
+              Sales_Lag_1    0.020292
+     Sales_Rolling_Std_96    0.019752
+     Sales_Rolling_Std_16    0.019733
+     Sales_Rolling_Max_32    0.019491
+
+✓ Feature importance plot saved
+
+======================================================================
+MULTI-HORIZON FORECAST EVALUATION
+======================================================================
+
+15MIN Horizon:
+  MAE: 11.34
+  RMSE: 26.85
+  MAPE: 193.96%
+
+30MIN Horizon:
+  MAE: 11.28
+  RMSE: 26.97
+  MAPE: 192.41%
+
+1HR Horizon:
+  MAE: 11.23
+  RMSE: 26.75
+  MAPE: 203.99%
+
+2HR Horizon:
+  MAE: 11.51
+  RMSE: 27.59
+  MAPE: 234.61%
+
+📊 Creating prediction visualizations...
+✓ Prediction analysis plot saved
+✓ Horizon comparison plot saved
+
+💾 Saving trained models...
+✅ Models saved to models/
+✅ Feature columns saved
+
+======================================================================
+TRAINING COMPLETE - SUMMARY
+======================================================================
+
+📈 BEST MODEL: Moving Average (1hr)
+   MAE: 8.04
+   RMSE: 18.64
+   MAPE: 152.90%
+
+📊 Model Comparison (sorted by RMSE):
+   Moving Average (1hr): MAE=8.04, RMSE=18.64
+   Ridge Regression: MAE=9.96, RMSE=18.95
+   Linear Regression: MAE=10.35, RMSE=19.22
+   Naive (t=t-1): MAE=8.54, RMSE=22.15
+   Random Forest: MAE=8.96, RMSE=22.32
+   Gradient Boosting: MAE=12.32, RMSE=25.09
+   XGBoost: MAE=11.23, RMSE=26.75
+
+⏱️ Forecast Horizon Performance (XGBoost):
+   15min: MAE=11.34, RMSE=26.85
+   30min: MAE=11.28, RMSE=26.97
+   1hr: MAE=11.23, RMSE=26.75
+   2hr: MAE=11.51, RMSE=27.59
+
+======================================================================
+All outputs saved to output/ and models/
+======================================================================

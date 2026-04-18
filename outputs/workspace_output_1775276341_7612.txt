@@ -1,0 +1,46 @@
+======================================================================
+SHORT-TERM DEMAND FORECASTING - MODEL TRAINING & EVALUATION
+======================================================================
+
+📊 Dataset loaded: 11854 records, 98 features
+
+🔧 Performing time-based train-test split...
+Training set: 9483 records (2025-11-11 10:00:00 to 2026-03-06 13:15:00)
+Test set: 2371 records (2026-03-06 13:30:00 to 2026-04-03 16:45:00)
+
+Features for training: 53
+
+======================================================================
+TRAINING BASELINE MODELS
+======================================================================
+Traceback (most recent call last):
+  File "/workspace/notebooks/04_model_training.py", line 117, in <module>
+    X_train = imputer.fit_transform(X_train)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/sklearn/utils/_set_output.py", line 316, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/sklearn/base.py", line 907, in fit_transform
+    return self.fit(X, **fit_params).transform(X)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/sklearn/base.py", line 1336, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/sklearn/impute/_base.py", line 447, in fit
+    X = self._validate_input(X, in_fit=True)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/sklearn/impute/_base.py", line 374, in _validate_input
+    raise ve
+  File "/usr/local/lib/python3.11/site-packages/sklearn/impute/_base.py", line 355, in _validate_input
+    X = validate_data(
+        ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/sklearn/utils/validation.py", line 2902, in validate_data
+    out = check_array(X, input_name="X", **check_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/sklearn/utils/validation.py", line 1074, in check_array
+    _assert_all_finite(
+  File "/usr/local/lib/python3.11/site-packages/sklearn/utils/validation.py", line 133, in _assert_all_finite
+    _assert_all_finite_element_wise(
+  File "/usr/local/lib/python3.11/site-packages/sklearn/utils/validation.py", line 182, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input X contains infinity or a value too large for dtype('float64').

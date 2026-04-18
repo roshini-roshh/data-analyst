@@ -1,0 +1,24 @@
+{
+  "id": "0da005de-270d-49d1-b45b-32e2e777a381",
+  "name": "Toronto Island Ferry Ticket Counts",
+  "format": "CSV",
+  "url": "https://ckan0.cf.opendata.inter.prod-toronto.ca/datastore/dump/0da005de-270d-49d1-b45b-32e2e777a381"
+}
+{
+  "id": "6c8e7ce0-1961-4c11-ba89-9db5deda88c0",
+  "name": "Toronto Island Ferry Ticket Counts.csv",
+  "format": "CSV",
+  "url": "https://ckan0.cf.opendata.inter.prod-toronto.ca/dataset/000ec8ae-1231-49ca-b6f8-6eb35b74a7ee/resource/6c8e7ce0-1961-4c11-ba89-9db5deda88c0/download/toronto-island-ferry-ticket-counts.csv"
+}
+{
+  "id": "2c501283-2ca3-4f7b-8040-2a4e539e30e8",
+  "name": "Toronto Island Ferry Ticket Counts.xml",
+  "format": "XML",
+  "url": "https://ckan0.cf.opendata.inter.prod-toronto.ca/dataset/000ec8ae-1231-49ca-b6f8-6eb35b74a7ee/resource/2c501283-2ca3-4f7b-8040-2a4e539e30e8/download/toronto-island-ferry-ticket-counts.xml"
+}
+{
+  "id": "4eb3631f-1738-4ae1-b497-c3130e732d9e",
+  "name": "Toronto Island Ferry Ticket Counts.json",
+  "format": "JSON",
+  "url": "https://ckan0.cf.opendata.inter.prod-toronto.ca/dataset/000ec8ae-1231-49ca-b6f8-6eb35b74a7ee/resource/4eb3631f-1738-4ae1-b497-c3130e732d9e/download/toronto-island-ferry-ticket-counts.json"
+}

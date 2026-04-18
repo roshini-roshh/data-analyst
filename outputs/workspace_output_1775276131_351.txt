@@ -1,0 +1,18 @@
+============================================================
+FEATURE ENGINEERING FOR SHORT-TERM DEMAND FORECASTING
+============================================================
+
+📊 Original dataset shape: (9519, 11)
+Date range: 2025-11-04 10:00:00 to 2026-04-03 18:45:00
+
+🔧 Creating proper time series structure...
+Expected intervals: 14436
+Actual records: 9519
+Missing intervals: 4917
+   First few missing: [Timestamp('2025-11-04 19:45:00'), Timestamp('2025-11-04 22:45:00'), Timestamp('2025-11-04 23:15:00'), Timestamp('2025-11-04 23:45:00'), Timestamp('2025-11-05 00:00:00')]
+   After reindexing: 14436 records
+Traceback (most recent call last):
+  File "/workspace/notebooks/03_feature_engineering.py", line 54, in <module>
+    df = df.fillna(method='bfill')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: NDFrame.fillna() got an unexpected keyword argument 'method'

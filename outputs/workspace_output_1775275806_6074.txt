@@ -1,0 +1,70 @@
+============================================================
+TORONTO ISLAND FERRY TICKET COUNTS - EXPLORATORY DATA ANALYSIS
+============================================================
+
+📊 DATASET OVERVIEW
+----------------------------------------
+Shape: 9519 rows × 4 columns
+
+Columns: ['_id', 'Timestamp', 'Redemption Count', 'Sales Count']
+
+Data Types:
+_id                 int64
+Timestamp             str
+Redemption Count    int64
+Sales Count         int64
+dtype: object
+
+📅 TIME RANGE
+----------------------------------------
+Start Date: 2025-11-04 10:00:00
+End Date: 2026-04-03 18:45:00
+Time Span: 150 days 08:45:00
+Total Days: 150
+
+🔍 MISSING VALUES
+----------------------------------------
+_id                 0
+Timestamp           0
+Redemption Count    0
+Sales Count         0
+dtype: int64
+
+📈 STATISTICAL SUMMARY
+----------------------------------------
+       Sales Count  Redemption Count
+count  9519.000000       9519.000000
+mean     11.624330         12.824877
+std      24.986095         21.528279
+min       0.000000          0.000000
+25%       1.000000          3.000000
+50%       5.000000          7.000000
+75%      13.000000         15.000000
+max    1000.000000        408.000000
+
+⚠️ DATA QUALITY CHECKS
+----------------------------------------
+Zero Sales Count: 1451 records
+Zero Redemption Count: 606 records
+Negative Sales Count: 0 records
+Negative Redemption Count: 0 records
+
+Unique Time Intervals: 33
+Expected interval: 15 minutes
+
+✅ Cleaned data saved to data/ferry_tickets_cleaned.csv
+
+📋 SUMMARY STATISTICS
+----------------------------------------
+total_records: 9519
+date_start: 2025-11-04 10:00:00
+date_end: 2026-04-03 18:45:00
+total_days: 150
+sales_mean: 11.624330286794832
+sales_std: 24.98609532442831
+sales_max: 1000
+sales_min: 0
+redemption_mean: 12.824876562664146
+redemption_std: 21.528279239675175
+redemption_max: 408
+redemption_min: 0

@@ -1,0 +1,2 @@
+Columns with Target:
+['Sales_Target_15min', 'Redemption_Target_15min', 'Sales_Target_30min', 'Redemption_Target_30min', 'Sales_Target_1hr', 'Redemption_Target_1hr', 'Sales_Target_2hr', 'Redemption_Target_2hr']
